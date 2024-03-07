@@ -1,14 +1,14 @@
 #container
 {
-  display: grid;
-  grid-template-columns: repeat(16, 30px);
-  grid-template-rows: repeat(16, 30px);
-  gap:1px;
-  
+  display: flex;
+  flex-wrap: wrap;
+  width: 480px;
 }
 
 .box
 {
   border: 1px solid red;
   background-color: white;
+  width:30px;
+  height:30px;
 }
