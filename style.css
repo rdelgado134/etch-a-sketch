@@ -1,15 +1,24 @@
 #container
 {
-  display: flex;
+  display :flex;
   flex-wrap: wrap;
   width: 480px;
+
+
 }
 
-.box
+#individual
 {
-  border: 1px solid red;
-  background-color: black;
+  border: 1px solid blue;
   width:30px;
-  height:30px;
+  height: 30px;
+  background-color: grey;
   box-sizing: border-box;
 }
+
+main
+{
+  display:flex;
+  justify-content: center;
+}
+
