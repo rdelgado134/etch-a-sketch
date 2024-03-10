@@ -8,7 +8,8 @@
 .box
 {
   border: 1px solid red;
-  background-color: white;
+  background-color: black;
   width:30px;
   height:30px;
+  box-sizing: border-box;
 }
