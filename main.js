@@ -26,12 +26,15 @@ function deleteGrid()
 
 /*Hover effect so that the grid divs change color when your
 mouse passes over them.*/
-
-//const newGridButton = document.getElementById("newGrid");//reference the new grid button
-
 containerRef.addEventListener("mouseover", changeBoxColor);
-
 function changeBoxColor(event)
 {
     event.target.style.backgroundColor = "red";
 }
+
+/*After the new grid button is pressed
+    -will need to delete the current grid
+    -build a new container for our new grid
+    -build the specified grid(max 100). Important to note
+    that the new grid has to maintain all prexisting flex 
+    and alignment rules.*/
