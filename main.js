@@ -18,9 +18,13 @@ function deleteGrid()
 {
     //Need to check the container div for divs with
     //the id="individual"; KEEPS THE CONTAINER
-    while(individual)
-    {
-        containerRef.remove(individual);
+
+    let individual = containerRef.querySelector("#individual");
+
+    while (individual) {
+        individual.remove();
+        // Find the next individual element
+        individual = containerRef.querySelector("#individual");
     }
 }
 
@@ -34,7 +38,34 @@ function changeBoxColor(event)
 
 /*After the new grid button is pressed
     -will need to delete the current grid
+    -prompt user for their desired size
     -build a new container for our new grid
     -build the specified grid(max 100). Important to note
     that the new grid has to maintain all prexisting flex 
-    and alignment rules.*/
+    and alignment rules.
+    
+    Change the flex width 
+    */
+
+function newGrid()
+{
+    const requestedSize = prompt("How many boxes do you want per side");
+    let sizeNum = parseInt(requestedSize);
+    const pixelWidth = 30;
+    const newFlexWidth = pixelWidth * sizeNum;
+    
+    deleteGrid();
+
+    for(let i = 0; i < sizeNum; i++)
+    {
+        for(let j = 0; j < sizeNum; j++)
+            {
+                const newBox = document.createElement("div");
+
+                newBox.id = "individual";
+                containerRef.appendChild(newBox);
+            }
+    }
+
+    containerRef.style.flexBasis = newFlexWidth + "px"; 
+}
