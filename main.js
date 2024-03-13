@@ -70,8 +70,18 @@ function newGrid()
     containerRef.style.flexBasis = newFlexWidth + "px"; 
 }
 
+/*This resets the grid color without deleting the grid
+
+CAUSES SOME LAG, NEEDS ADJUSTMENT OR SCRAPPING*/
+
 function clearGrid()
 {
     //set the each grid box to default color through css
-    containerRef.style.backgroundColor = grey;
+    const grabBox = document.querySelectorAll("#individual");
+    const numOfBoxes = grabBox.length;
+
+    for (let i = 0; i < numOfBoxes; i++) 
+    {
+        grabBox[i].style.backgroundColor = "grey";
+    }
 }
