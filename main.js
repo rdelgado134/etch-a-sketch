@@ -53,7 +53,7 @@ function newGrid()
     let sizeNum = parseInt(requestedSize);
     const pixelWidth = 30;
     const newFlexWidth = pixelWidth * sizeNum;
-    
+
     deleteGrid();
 
     for(let i = 0; i < sizeNum; i++)
@@ -68,4 +68,10 @@ function newGrid()
     }
 
     containerRef.style.flexBasis = newFlexWidth + "px"; 
+}
+
+function clearGrid()
+{
+    //set the each grid box to default color through css
+    containerRef.style.backgroundColor = grey;
 }
