@@ -1,10 +1,13 @@
+*
+{
+  background-color: rgba(76, 71, 96);
+}
+
 #container
 {
   display :flex;
   flex-wrap: wrap;
   width: 480px;
-
-
 }
 
 #individual
@@ -22,3 +25,42 @@ main
   justify-content: center;
 }
 
+body
+{
+  display:flex;
+  flex-direction: column;
+}
+
+.title
+{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight:bold;
+  color: rgb(255, 50, 50);
+}
+
+#newGrid, #erase
+{
+    color: rgb(255, 255, 255);
+    font-size: 27px;
+    line-height: 27px;
+    padding: 14px;
+    border-radius: 0px;
+    font-family: Georgia, serif; font-weight: normal; 
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    background-image: linear-gradient(to right, rgb(28, 110, 164) 0%,
+     rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); 
+     box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; border: 2px solid rgb(28, 110, 164); display: inline-block;
+}
+
+#newGrid:hover {
+background: red }
+#newGrid:active {
+background: #144E75; }
+
+#erase:hover {
+background: red }
+#erase:active {
+background: #144E75; }
