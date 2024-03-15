@@ -95,4 +95,4 @@ CAUSES SOME LAG, NEEDS ADJUSTMENT OR SCRAPPING*/
     }
 
 
-//function rand
+//function redOnly

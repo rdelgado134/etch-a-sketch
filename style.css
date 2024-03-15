@@ -1,4 +1,4 @@
-*
+html
 {
   background-color: rgba(76, 71, 96);
 }
@@ -12,14 +12,21 @@
 
 #individual
 {
-  border: 1px solid blue;
+  border: 1px solid black;
   width:30px;
   height: 30px;
   background-color: grey;
   box-sizing: border-box;
 }
 
-main
+header
+{
+  display: flex;
+  justify-content: space-around;
+  margin: 15px;
+}
+
+main, h1
 {
   display:flex;
   justify-content: center;
@@ -38,7 +45,7 @@ body
   color: rgb(255, 50, 50);
 }
 
-#newGrid, #erase
+#newGrid, #erase, #redOnly
 {
     color: rgb(255, 255, 255);
     font-size: 27px;
