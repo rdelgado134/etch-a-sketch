@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etch a Sketch</title>
+    <title>Your Page Title</title>
     <!-- Your CSS stylesheets -->
     <link rel="stylesheet" href="style.css">
 </head>
+<body>
+    <h1 class = "title">Richie's Etch a Sketch</h1>
+    <header>
+        <button id = "newGrid" onclick="newGrid()">Request a new grid</button>
+        <button id = "erase" onclick= "clearGrid()">Clear your work</button>
+    </header>
 
-<header>
-    <h1>Richie's Etch a Sketch</h1>
-</header>
+    <main>
+        <!-- Main content of your page -->
+    <div id = "container"> </div>
+    </main>
 
-<main>
-    <!-- Main content of your page -->
-    <section>
-        <div id ="container"> </div>
-    </section>
-</main>
+    <footer>
+        <!-- Footer content -->
+       <!-- <button id = "redOnly" onclick = "redOnly()"> Color only red</button> -->
+    </footer>
 
-<footer>
-    <!-- Footer content -->
-</footer>
-
-<!-- Your JavaScript scripts -->
-<script src="main.js"></script>
+    <!-- Your JavaScript scripts -->
+    <script src="main.js"></script>
+</body>
 </html>
