@@ -33,7 +33,14 @@ mouse passes over them.*/
 containerRef.addEventListener("mouseover", changeBoxColor);
 function changeBoxColor(event)
 {
-    event.target.style.backgroundColor = "red";
+    //Below is the base line of code that makes the boxes red
+    //event.target.style.backgroundColor = "red";
+
+    var colors = ["red", "green", "blue", "yellow", "brown", "purple"];
+
+    var grabRandomColor = colors[(Math.floor(Math.random() * colors.length))];
+
+    event.target.style.backgroundColor = grabRandomColor;
 }
 
 /*After the new grid button is pressed
@@ -79,9 +86,26 @@ function clearGrid()
     //set the each grid box to default color through css
     const grabBox = document.querySelectorAll("#individual");
     const numOfBoxes = grabBox.length;
+    //delete the old one but maintain the existing size
 
-    for (let i = 0; i < numOfBoxes; i++) 
+    let individual = containerRef.querySelector("#individual");
+    while (individual) {
+        individual.remove();
+        // Find the next individual element
+        individual = containerRef.querySelector("#individual");
+    }
+
+    //create the new grid
+    for(let i = 0; i < numOfBoxes; i++)
     {
-        grabBox[i].style.backgroundColor = "grey";
+        for(let j = 0; j < numOfBoxes; j++)
+            {
+                const newBox = document.createElement("div");
+
+                newBox.id = "individual";
+                containerRef.appendChild(newBox);
+            }
     }
 }
+
+//function randomColor
