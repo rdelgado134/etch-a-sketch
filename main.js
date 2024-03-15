@@ -81,31 +81,18 @@ function newGrid()
 
 CAUSES SOME LAG, NEEDS ADJUSTMENT OR SCRAPPING*/
 
-function clearGrid()
-{
-    //set the each grid box to default color through css
-    const grabBox = document.querySelectorAll("#individual");
-    const numOfBoxes = grabBox.length;
-    //delete the old one but maintain the existing size
-
-    let individual = containerRef.querySelector("#individual");
-    while (individual) {
-        individual.remove();
-        // Find the next individual element
-        individual = containerRef.querySelector("#individual");
-    }
-
-    //create the new grid
-    for(let i = 0; i < numOfBoxes; i++)
+    function clearGrid()
     {
-        for(let j = 0; j < numOfBoxes; j++)
-            {
-                const newBox = document.createElement("div");
-
-                newBox.id = "individual";
-                containerRef.appendChild(newBox);
-            }
+        //set the each grid box to default color through css
+        //containerRef.style.backgroundColor = grey;
+        const grabBox = document.querySelectorAll("#individual");
+        const numOfBoxes = grabBox.length;
+    
+        for (let i = 0; i < numOfBoxes; i++) 
+        {
+            grabBox[i].style.backgroundColor = "grey";
+        }
     }
-}
 
-//function randomColor
+
+//function rand
